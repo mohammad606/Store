@@ -1,0 +1,37 @@
+.contFormAdd,
+.contFormRemove{
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+}
+
+.contFormAdd label,
+.contFormRemove label{
+    color: mediumblue;
+    border-top: 2px solid black;
+    margin-top: 50px;
+}
+
+.contFormAdd button{
+    margin-top: 25px;
+    color: mediumblue;
+    transition: 0.5s;
+}
+
+.contFormAdd button:hover{
+    color: #fff;
+    background-color:mediumblue ;
+}
+.tableOrder{
+    width: 100%;
+    margin: 30px 10px 0px 0px;
+    border: 2px solid black;
+}
+.tableOrder thead{
+    border-bottom: 4px solid black;
+    text-align: center;
+}
+.tableOrder tbody tr{
+    text-align: center;
+    border-bottom: 2px solid #767676;
+}

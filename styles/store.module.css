@@ -1,0 +1,55 @@
+.contPageStore{
+    display: flex;
+    flex-direction:row;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+}
+.constNameStore{
+    text-align: center;
+    margin: 15px 0px;
+}
+
+
+.contStore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contStore table{
+    width: 90%;
+}
+
+.constAddDataToStore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.constAddDataToStore form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid;
+    padding: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.constAddDataToStore form input ,
+.constAddDataToStore form select {
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+/*--------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+    .contPageStore{
+        flex-direction: column;
+    }
+
+}

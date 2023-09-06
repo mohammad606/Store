@@ -1,0 +1,35 @@
+.contAllOrder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: row;
+}
+
+.formSearch{
+    background-color: grey;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.formSearch div{
+    width: 100%;
+    margin: 5px 0;
+}
+
+.formSearch input {
+    margin-right: 5px;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+/*---------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+    .contAllOrder {
+        flex-direction: column !important;
+    }
+}

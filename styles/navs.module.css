@@ -1,0 +1,56 @@
+.NavTow{
+    font-family: initial;
+
+}
+.nav{
+    width: 5%!important;
+    align-items: flex-start !important;
+    position: relative;
+    max-height: 134vh;
+}
+
+.contDataNave{
+    position: sticky;
+    top:10px;
+    padding:0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.siteName{
+    margin:0px !important;
+    font-size:35px !important;
+}
+.contLink{
+    display: flex !important;
+    flex-direction: column !important;
+}
+.contLink a{
+    padding: 0px;
+    margin: 60% 0px;
+}
+
+
+/*------------------------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+    .NavTow{
+        display: none !important;
+    }
+
+    .siteName{
+        margin-left: 10px !important;
+    }
+
+    .nav {
+        width: 100% !important;
+        height: 50px !important;
+        align-items: center !important;
+    }
+    .nav div{
+        flex-direction: row !important;
+    }
+
+}
+
+
+
