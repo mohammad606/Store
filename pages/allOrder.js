@@ -106,7 +106,7 @@ const AllOrder =()=>{
         },
         {
             name:'Noa',
-            sortable:true,
+            sortable:"true",
             selector : row => row.noa,
             style : {
                 backgroundColor : '#9e9e9e',
@@ -117,7 +117,7 @@ const AllOrder =()=>{
         },
         {
             name:'Order Number',
-            sortable:true,
+            sortable:"true",
             selector : row => row.id,
             style : {
                 backgroundColor : '#212529',
@@ -213,15 +213,14 @@ const AllOrder =()=>{
                         update(ref(data, `${user}/Input and output data/Output/${e.id}`), {
                             delet:true
                         })
-                        store.forEach((e)=>{
-                            items.forEach(f=>{
-                               qtn.forEach(q=>{
-                                   if(e.key == f && items.indexOf(f) == qtn.indexOf(q)){
-                                       update(ref(data,`${user}/Store/${e.key}`),{
-                                           qtn: Number(e.qtn) + Number(q)
-                                       });
-                                   }
-                               })
+                        const mergedArrasy = items.map((key, index) => ({'name' : key ,'qtn' : qtn[index]}))
+                        mergedArrasy.map(e=>{
+                            store.forEach(i=>{
+                                if(i.key === e.name ){
+                                    update(ref(data,`${user}/Store/${i.key}`),{
+                                        qtn: Number(i.qtn) + Number(e.qtn)
+                                    });
+                                }
                             })
                         })
                         setTimeout(() => {
@@ -241,7 +240,7 @@ const AllOrder =()=>{
             <div className='w-100'>
                 <form className={style.formSearch}>
                     <div>
-                        <input type='text' onChange={e=>setInputSearch(e.target.value)} placeholder='Search ...'/>
+                        <input type='text' id="search" name="search" onChange={e=>setInputSearch(e.target.value)} placeholder='Search ...'/>
                         <Button variant="dark" onClick={hundleSearch}>Search</Button>
                     </div>
                 </form>
